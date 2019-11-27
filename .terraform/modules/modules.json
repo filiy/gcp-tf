@@ -1,1 +1,0 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"instance-group","Source":"./modules/terraform-google-managed-instance-group","Dir":"modules/terraform-google-managed-instance-group"},{"Key":"service_account_for_instances","Source":"./modules/terraform-google-service-account","Dir":""}]}

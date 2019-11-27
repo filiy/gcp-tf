@@ -132,6 +132,6 @@ variable "host_maintenance" {
   default     = "MIGRATE"
 }
 
-variable "ssh_user" {}
+/* variable "ssh_user" {}
 variable "ssh_key_path" {}
-variable "ssh_key_pub" {}
+variable "ssh_key_pub" {} */

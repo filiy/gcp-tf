@@ -1,3 +1,15 @@
+terraform {
+  backend "remote" {
+    hostname = "tfe.filiy.team.arctiq.ca" 
+    token = "spzE7cYQV6MUQQ.atlasv1.H0XRWNf0m89zkhlqMZjzrynViZbxYfFlInzvPXzXPVMs9sz5Igw75rTPzTvdvsRFxXs"
+    organization = "arctiq-lab"
+
+    workspaces {
+      name = "gcp-vm"
+    }
+  }
+}
+
 provider "google" {
 }
 
@@ -19,7 +31,7 @@ module "instance-group" {
   service_port_name         = var.service_port_name
   service_port_admin        = var.service_port_admin
   service_port_admin_name   = var.service_port_admin_name
-  ssh_user                  = var.ssh_user
-  ssh_key_path              = var.ssh_key_path
-  ssh_key_pub               = var.ssh_key_pub
+  #ssh_user                  = var.ssh_user
+  #ssh_key_path              = var.ssh_key_path
+  #ssh_key_pub               = var.ssh_key_pub
 }

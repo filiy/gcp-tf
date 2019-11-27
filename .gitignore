@@ -1,0 +1,4 @@
+.terraform/terraform.tfstate
+.terraform/plugins/linux_amd64/terraform-provider-google_v3.0.0-beta.1_x4
+.terraform/plugins/linux_amd64/lock.json
+.terraform/modules/modules.json

@@ -24,9 +24,9 @@ resource "google_compute_instance_template" "default" {
     mode         = "${var.mode}"
   }
 
-  metadata = {
-    ssh-keys = "${var.ssh_user}:${file("${var.ssh_key_path}${var.ssh_key_pub}")}"
-  }
+  #metadata = {
+  #  ssh-keys = "${var.ssh_user}:${file("${var.ssh_key_path}${var.ssh_key_pub}")}"
+  #}
 
   scheduling {
     preemptible         = "${var.preemptible}"

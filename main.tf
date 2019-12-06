@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
     hostname = "tfe.filiy.team.arctiq.ca" 
-    token = "spzE7cYQV6MUQQ.atlasv1.H0XRWNf0m89zkhlqMZjzrynViZbxYfFlInzvPXzXPVMs9sz5Igw75rTPzTvdvsRFxXs"
+    token = "e6r1GOPwYNzGRQ.atlasv1.IBYVeizznQBRqBea5Y3y1LqzqBH4LwUYbFr1vHO7ZGLJdwsc7m7Ap0WHlyvorLXdyoI"
     organization = "arctiq-lab"
 
     workspaces {

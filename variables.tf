@@ -1,24 +1,24 @@
-# Project Variables
-variable "project" {}
-variable "region" {}
+variable "gcp_project" {
+    description = "GCP project name"
+    default = "p-teckresources-tfe"
+}
 
-# IG Variables
-variable "template_name" {}
-variable "group_name" {}
-variable "base_name" {}
-variable "compute_image" {}
-variable "machine_type" {}
-variable "disk_size" {}
-variable "network" {}
-variable "subnetwork" {}
-variable "subnetwork_project" {}
-variable "service_port" {}
-variable "service_port_name" {}
-variable "service_port_admin" {}
-variable "service_port_admin_name" {}
-variable "startup_size" {}
-variable "target_tags" {}
-variable "ssh_user" {}
-variable "ssh_key_path" {}
-variable "ssh_key_pub" {}
-variable "ssh_key_priv" {}
+variable "machine_type" {
+    description = "GCP machine type"
+    default = "n1-standard-4"
+}
+
+variable "instance_name" {
+    description = "GCP instance name"
+    default = "demo"
+}
+
+variable "image" {
+    description = "GCP image"
+    default = "debian-cloud/debian-9"
+}
+
+provider "google" {
+    project = "${var.gcp_project}"
+    region = "us-west1"
+}

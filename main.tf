@@ -31,3 +31,9 @@ resource "google_compute_instance" "demo" {
     }
 
 }
+
+resource "null_resource" "gcloud" {
+  provisioner "local-exec" {
+    command = "gcloud version"
+  }
+}

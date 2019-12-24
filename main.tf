@@ -24,3 +24,12 @@ resource "null_resource" "gcloud" {
     command = "gcloud version"
   }
 }
+
+data "google_iam_policy" "admin" {
+  binding {
+    role = "roles/iap.httpsResourceAccessor"
+    members = [
+      "user:jane@example.com",
+    ]
+  }
+}

@@ -1,12 +1,12 @@
-terraform {
-  backend "remote" {
-    organization = "phil-test"
-    token = "WTBi9oUzokQUEw.atlasv1.UOgk2q1YFvFLzYIvTyJYokK24DBE8cXqB3oCd2FfzCgWDWQ2KJkVaIzG6jSMcvhCoFs"
-    workspaces {
-      name = "iap-test"
-    }
-  }
-}
+#terraform {
+#  backend "remote" {
+#    organization = "phil-test"
+#    token = "WTBi9oUzokQUEw.atlasv1.UOgk2q1YFvFLzYIvTyJYokK24DBE8cXqB3oCd2FfzCgWDWQ2KJkVaIzG6jSMcvhCoFs"
+#    workspaces {
+#      name = "iap-test"
+#    }
+#  }
+#}
 
 
 provider "google" {

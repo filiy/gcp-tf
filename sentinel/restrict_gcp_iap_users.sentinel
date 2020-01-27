@@ -1,6 +1,8 @@
-# This policy uses the Sentinel tfplan import to require that all IAP resources
-# members are in a specific domain.
+# This policy uses the Sentinel tfplan import to require that all GCP compute
+# instances have all mandatory tags.
 
+# Note that the comparison is case-sensitive but also that Google network tags
+# are only allowed to contain lowercase letters, numbers, and dashes.
 
 ##### Imports #####
 
@@ -80,12 +82,14 @@ validate_attribute_contains_list = func(type, attribute, required_values) {
 
         # Evaluate each member of required_values list
         for required_values as rv {
-          if r.applied[attribute] contains rv {
-            print("Resource", address, "has attribute", attribute,
-                  "that is missing required value", rv, "from the list:",
-                  required_values)
-            validated = false
-          } // end rv
+          for r.applied[attribute] as user {
+            if user not contains rv {
+              print("Resource", address, "has attribute", attribute,
+                    "that is missing required value", rv, "from the list:",
+                    required_values)
+              validated = false
+            } // end if
+          }
         } // end required_values
 
       } else {

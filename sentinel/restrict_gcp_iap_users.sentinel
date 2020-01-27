@@ -103,7 +103,7 @@ validate_attribute_contains_list = func(type, attribute, required_values) {
 }
 
 ### List of mandatory labels ###
-mandatory_labels = ["arctiq.ca"]
+mandatory_labels = ["teck.dev"]
 
 ### Rules ###
 

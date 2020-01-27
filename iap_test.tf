@@ -16,6 +16,6 @@ resource "google_iap_web_iam_binding" "editor" {
   project = "p-teckresources-tfe"
   role = "roles/iap.httpsResourceAccessor"
   members = [
-    "user:phil@arctiq.ca",
+    "user:phil@teck.dev",
   ]
 }
